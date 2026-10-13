@@ -1,0 +1,11 @@
+{
+  "name": "aula-banco",
+  "version": "1.0.0",
+  "description": "BD2 - integrando o banco de dados com o Node.js",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "express": "^4.21.2",
+    "sql.js": "^1.12.0"
+  }
+}

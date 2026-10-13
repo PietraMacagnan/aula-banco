@@ -1,0 +1,47 @@
+AULA - INTEGRANDO O BANCO DE DADOS COM O NODE.JS
+Banco de Dados II - AGROC 25/1 - Prof. Nathan Freitas Ferreira - 09/10/2026
+
+PREPARAR
+1) Extraia o zip. Abra a pasta aula-banco no VS Code: File > Open Folder.
+2) Abra o terminal: Terminal > New Terminal. A linha deve terminar com  aula-banco>
+3) Rode UMA VEZ no terminal (baixa o banco SQLite e o Express):
+     npm install --strict-ssl=false
+   Espere terminar. Vai aparecer a pasta node_modules.
+
+COMO FAZER CADA PASSO
+- Crie um arquivo novo DENTRO da pasta aula-banco: meu1.js, meu2.js, meu3.js ...
+- Digite o codigo do slide e salve (Ctrl+S).
+- Rode no terminal:  node meu1.js
+- Travou? Rode o arquivo pronto (por exemplo  node passo3.js ) e siga com a turma.
+
+ARQUIVOS PRONTOS
+passo1.js  abre o banco (cria o arquivo fazenda.db)
+passo2.js  cria a tabela animal
+passo3.js  cadastra 3 animais
+passo4.js  lista todos os animais
+passo5.js  filtra por raca:          node passo5.js Angus
+passo6.js  altera o peso:            node passo6.js BR-003 410
+passo7.js  exclui um animal:         node passo7.js BR-002
+passo8.js  servidor web com os dados do banco: abra http://localhost:3000/animais  (Ctrl+C desliga)
+passo9.js  o servidor de TERCA (talhoes, Programacao Web) agora gravando no banco:
+           abra http://localhost:3000/talhoes  e  http://localhost:3000/cadastro
+           Cadastre um talhao, desligue (Ctrl+C), ligue de novo: ele continua la!
+zerar.js   apaga o banco para comecar do zero:  node zerar.js
+banco.js   a ponte entre o JavaScript e o banco. Nao precisa mexer.
+
+PROBLEMAS COMUNS
+- Apareceu "Welcome to Node.js" e um sinal  >  : voce entrou no Node. Digite  .exit  e Enter.
+- "a tabela nao existe": rode o passo 2 antes.
+- "valor repetido em campo UNIQUE": esse brinco ja existe. Nao e defeito: e a restricao funcionando.
+- "Cannot use import statement outside a module": o arquivo foi salvo fora da pasta aula-banco.
+- Quer recomecar: node zerar.js e depois os passos 1, 2 e 3.
+
+DESAFIOS (um arquivo para cada: d1.js, d2.js ...)
+D1. Cadastre mais dois animais. Depois tente um animal com peso -10 e explique a mensagem.
+D2. Liste os animais de um pasto digitado no terminal:      node d2.js "Pasto 1"
+D3. Liste os animais com peso acima de um valor digitado:   node d3.js 400
+D4. Marque um animal como vendido (status VENDIDO) pelo brinco:  node d4.js BR-001
+D5. Exclua todos os animais com status VENDIDO e mostre quantos foram excluidos.
+D6. Bonus (Web): no passo9, crie a rota GET /area/:minima com os talhoes de area maior que o valor (abra /area/90).
+
+ENTREGA: compacte a pasta com os arquivos d1.js a d5.js (ou d6.js) e um print do terminal, e envie no Moodle.
